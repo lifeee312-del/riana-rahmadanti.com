@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Riana Rahmadanti | Portfolio</title>
+  <meta name="description" content="Portfolio Riana Rahmadanti - Information Systems graduate, Administration, Document Control, and Frontend Development.">
+  <style>
+    :root{
+      --bg:#faf9ff; --card:#ffffff; --text:#20202a; --muted:#6f7080;
+      --primary:#7c5cff; --primary2:#a98cff; --soft:#eeeaff; --line:#e8e5f0;
+      --shadow:0 18px 50px rgba(48,38,86,.10); --radius:24px;
+    }
+    *{box-sizing:border-box;scroll-behavior:smooth}
+    body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
+    a{text-decoration:none;color:inherit}
+    .container{width:min(1120px,92%);margin:auto}
+    nav{position:sticky;top:0;z-index:10;background:rgba(250,249,255,.88);backdrop-filter:blur(14px);border-bottom:1px solid rgba(232,229,240,.8)}
+    .nav-inner{height:72px;display:flex;align-items:center;justify-content:space-between}
+    .logo{font-size:1.25rem;font-weight:800;letter-spacing:-.5px}.logo span{color:var(--primary)}
+    .links{display:flex;gap:28px;color:var(--muted);font-size:.93rem}.links a:hover{color:var(--primary)}
+    .hero{min-height:calc(100vh - 72px);display:grid;grid-template-columns:1.2fr .8fr;align-items:center;gap:50px;padding:70px 0}
+    .eyebrow{display:inline-flex;gap:8px;align-items:center;background:var(--soft);color:var(--primary);padding:7px 13px;border-radius:999px;font-weight:700;font-size:.82rem}
+    h1{font-size:clamp(3rem,7vw,5.7rem);line-height:.98;letter-spacing:-4px;margin:22px 0}
+    h1 span{color:var(--primary)}
+    .hero p{font-size:1.05rem;color:var(--muted);max-width:650px}
+    .buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+    .btn{padding:13px 20px;border-radius:13px;font-weight:700;border:1px solid var(--line);background:#fff}
+    .btn.primary{background:var(--text);color:#fff;border-color:var(--text)}.btn:hover{transform:translateY(-2px);transition:.2s}
+    .hero-card{background:linear-gradient(145deg,#fff,#f0edff);border:1px solid var(--line);border-radius:32px;padding:34px;box-shadow:var(--shadow);position:relative;overflow:hidden}
+    .hero-card:before{content:"";position:absolute;width:190px;height:190px;background:#dcd3ff;border-radius:50%;right:-70px;top:-70px}
+    .avatar{width:100px;height:100px;border-radius:28px;background:var(--primary);color:white;display:grid;place-items:center;font-size:2.3rem;font-weight:800;position:relative}
+    .hero-card h3{margin:25px 0 5px;font-size:1.5rem}.hero-card p{margin:0}
+    section{padding:95px 0}.section-head{margin-bottom:38px}.section-head small{color:var(--primary);font-weight:800;text-transform:uppercase;letter-spacing:2px}.section-head h2{font-size:2.5rem;letter-spacing:-1.5px;margin:7px 0}.section-head p{color:var(--muted);max-width:650px}
+    .about{display:grid;grid-template-columns:.85fr 1.15fr;gap:55px;align-items:start}
+    .about-box{background:var(--card);padding:30px;border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}
+    .facts{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:20px}.fact{padding:18px;background:#f7f5ff;border-radius:16px}.fact b{display:block}.fact span{color:var(--muted);font-size:.88rem}
+    .skills{display:flex;flex-wrap:wrap;gap:11px}.skill{padding:11px 15px;background:#fff;border:1px solid var(--line);border-radius:12px;font-weight:650}
+    .timeline{display:grid;gap:18px}.job{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px;display:grid;grid-template-columns:210px 1fr;gap:25px;box-shadow:0 10px 30px rgba(48,38,86,.05)}
+    .date{color:var(--primary);font-weight:800;font-size:.9rem}.job h3{margin:0 0 3px}.company{color:var(--muted);font-weight:600}.job ul{margin:14px 0 0;padding-left:20px;color:var(--muted)}
+    .cards{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.card{background:#fff;border:1px solid var(--line);padding:27px;border-radius:var(--radius)}.tag{display:inline-block;background:var(--soft);color:var(--primary);font-size:.78rem;font-weight:800;padding:5px 10px;border-radius:999px}.card h3{margin:15px 0 8px}.card p{color:var(--muted);margin:0}
+    .contact{background:#211d31;color:#fff;border-radius:32px;padding:50px;display:block;box-shadow:var(--shadow)}
+.contact p{color:#c9c5d4}.contact .section-head h2{margin-bottom:10px}
+.contact-info{display:grid;gap:12px;margin-top:22px}
+.contact-item{display:flex;align-items:center;gap:12px;color:#e8e5f0}
+.contact-item .icon{width:38px;height:38px;border-radius:11px;background:#353044;display:grid;place-items:center}
+.contact-item a{color:#fff;font-weight:600}.contact-item a:hover{color:#c7baff}
+.contact-actions{display:none}
+    footer{padding:30px 0;color:var(--muted);font-size:.88rem;text-align:center}
+    @media(max-width:800px){.links{display:none}.hero,.about{grid-template-columns:1fr}.hero{padding-top:55px}.job{grid-template-columns:1fr;gap:5px}.cards{grid-template-columns:1fr}.contact{padding:32px;display:block}.contact .buttons{margin-top:20px}h1{letter-spacing:-2px}}
+  </style>
+</head>
+<body>
+<nav><div class="container nav-inner">
+  <a class="logo" href="#home">Riana<span>.</span></a>
+  <div class="links"><a href="#about">About</a><a href="#skills">Skills</a><a href="#experience">Experience</a><a href="#education">Education</a><a href="#contact">Contact</a></div>
+</div></nav>
+
+<main>
+<section class="hero" id="home"><div class="container" style="display:contents">
+  <div>
+    <span class="eyebrow">✦ Open to opportunities</span>
+    <h1>Hi, I'm <span>Riana.</span></h1>
+    <p>Information Systems graduate with experience in administration, document control, data management, and frontend development.</p>
+    <div class="buttons">
+      <a class="btn primary" href="#experience">View Experience ↗</a>
+      <a class="btn" href="#contact">Let's Connect</a>
+    </div>
+  </div>
+  <div class="hero-card">
+    <div class="avatar">RR</div>
+    <h3>Riana Rahmadanti</h3>
+    <p>Administration · Document Control · Frontend Development</p>
+    <div class="facts">
+      <div class="fact"><b>3.96 / 4.00</b><span>GPA</span></div>
+      <div class="fact"><b>Information Systems</b><span>Bachelor's Degree</span></div>
+    </div>
+  </div>
+</div></section>
+
+<section id="about"><div class="container">
+  <div class="section-head"><small>01 — About</small><h2>A little about me.</h2></div>
+  <div class="about">
+    <div class="about-box"><h3>Professional Profile</h3><p>Information Systems graduate with hands-on experience in document control, office administration, and data management. Proficient in document verification, records management, Microsoft Office, and administrative support. Strong attention to detail with excellent organizational and communication skills.</p></div>
+    <div><h3>What I can bring</h3><p style="color:var(--muted)">I combine administrative accuracy with a technology background. I am comfortable handling documents, records, operational data, correspondence, inventory, and digital systems while collaborating with different teams.</p></div>
+  </div>
+</div></section>
+
+<section id="skills"><div class="container">
+  <div class="section-head"><small>02 — Skills</small><h2>Tools & capabilities.</h2></div>
+  <div class="skills">
+    <span class="skill">Microsoft Office</span><span class="skill">Google Workspace</span><span class="skill">Document Management</span><span class="skill">Records Management</span><span class="skill">Administrative Support</span><span class="skill">Filing System</span><span class="skill">Inventory Management</span><span class="skill">Data Analysis</span><span class="skill">Report Preparation</span><span class="skill">Email Management</span><span class="skill">Scheduling</span><span class="skill">Office Administration</span><span class="skill">HTML</span><span class="skill">CSS</span><span class="skill">JavaScript</span><span class="skill">CodeIgniter</span>
+  </div>
+</div></section>
+
+<section id="experience"><div class="container">
+  <div class="section-head"><small>03 — Experience</small><h2>Where I've worked.</h2></div>
+  <div class="timeline">
+    <article class="job"><div class="date">SEP 2025 — AUG 2026</div><div><h3>Front Office Administrasi</h3><div class="company">Universitas Bina Sarana Informatika · Jakarta</div><ul><li>Managed cash inflow/outflow records and maintained financial data.</li><li>Provided front office services for students, visitors, and external stakeholders.</li><li>Managed correspondence, calls, and administrative documentation.</li><li>Coordinated operational requests including vehicle maintenance, overtime, catering, and monthly operational contributions.</li><li>Managed office supplies (ATK/ARTK), inventory monitoring, and data entry.</li><li>Maintained physical and digital filing systems and collaborated across departments.</li></ul></div></article>
+    <article class="job"><div class="date">NOV 2024 — FEB 2025</div><div><h3>Document Control</h3><div class="company">Pasifik Satelit Nusantara · Jakarta</div><ul><li>Reviewed document completeness before processing.</li><li>Verified document accuracy, numbers, dates, signatures, and attachments.</li><li>Coordinated with Engineering to resolve incomplete or incorrect documentation.</li><li>Uploaded finalized documents to the Project Management Tool after validation and approval.</li></ul></div></article>
+    <article class="job"><div class="date">SEP 2023 — DEC 2023</div><div><h3>Frontend Developer Intern</h3><div class="company">Balai Besar Standardisasi Pelayanan Jasa Industri Kimia, Farmasi, dan Kemasan · Jakarta</div><ul><li>Developed responsive website interfaces using HTML, CSS, and JavaScript.</li><li>Implemented UI designs using the CodeIgniter framework.</li><li>Tested and resolved website display issues.</li><li>Collaborated with the development team during website development.</li></ul></div></article>
+  </div>
+</div></section>
+
+<section id="education"><div class="container">
+  <div class="section-head"><small>04 — Education & Achievements</small><h2>Learning & milestones.</h2></div>
+  <div class="cards">
+    <div class="card"><span class="tag">EDUCATION</span><h3>Universitas Bina Sarana Informatika</h3><p>Bachelor of Information Systems · Sep 2020 — Aug 2024</p><strong>GPA 3.96 / 4.00</strong></div>
+    <div class="card"><span class="tag">CERTIFICATION</span><h3>Program Analysis Competency</h3><p>BNSP · 2023</p></div>
+    <div class="card"><span class="tag">ACHIEVEMENT</span><h3>GEMASTIK XV</h3><p>Data Mining Competition · 2022</p></div>
+    <div class="card"><span class="tag">TRAINING</span><h3>Digital Guide Indonesia × MicroMentor</h3><p>Pusbang Proserti · 2023</p><p>Service Excellence Training · 2025</p></div>
+  </div>
+</div></section>
+
+<section id="contact"><div class="container">
+  <div class="contact"><div>
+      <div class="section-head" style="margin:0">
+        <small style="color:#a98cff">05 — Contact</small>
+        <h2 style="color:white">Let's work together.</h2>
+        <p>If you'd like to discuss an opportunity, feel free to reach out.</p>
+      </div>
+      <div class="contact-info">
+        <div class="contact-item"><span class="icon">✉</span><a href="mailto:rahmadantiriana03@gmail.com">rahmadantiriana03@gmail.com</a></div>
+        <div class="contact-item"><span class="icon">☏</span><a href="https://wa.me/6285710217853" target="_blank" rel="noopener">0857 1021 7853</a></div>
+        <div class="contact-item"><span class="icon">in</span><a href="https://linkedin.com/in/riana-rahmadanti" target="_blank" rel="noopener">linkedin.com/in/riana-rahmadanti</a></div>
+        <div class="contact-item"><span class="icon">⌂</span><span>Depok, Jawa Barat</span></div>
+      </div>
+    </div>
+
+  </div>
+</div></section>
+</main>
+<footer>© 2026 Riana Rahmadanti · Built with HTML & CSS</footer>
+</body>
+</html>
